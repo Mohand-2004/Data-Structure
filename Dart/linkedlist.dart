@@ -13,6 +13,7 @@
 // 11.operator[] => to access any value by it's element - this methode is useful to loop on the linkedlist elements
 // 12.operator= => to assign a list to the linkedlist easly
 // 13.operator+ to Concatenate a new linkedlist to this linkedlist
+// 14.indexof() => to get the index of a speceific value
 
 // Mohand Elsebaey
 
@@ -324,6 +325,21 @@ class Node<DataType>{
       current = current._next;
     }
     return copy;
+  }
+
+  // function to get the index of a speceific value
+  int? indexof(DataType value){
+    Node? current = this;
+    for(int i = 0;i<this._lenght;i++){
+      if(current!._item == value){
+        return i;
+      }
+      else{
+        current = current._next;
+      }
+    }
+    print("Error , this value isn't exist in the linkedlist");
+    return null;
   }
 
   // operator overloading to Concatenate a new linkedlist to this linkedlist

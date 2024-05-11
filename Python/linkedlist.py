@@ -13,6 +13,7 @@
 # 11.operator[] => to access any value by it's element - this methode is useful to loop on the linkedlist elements
 # 12.operator= => to assign a list to the linkedlist easly
 # 13.operator+ to Concatenate a new linkedlist to this linkedlist
+# 14.indexof() => to get the index of a speceific value
 
 # Mohand Elsebaey
 
@@ -227,13 +228,21 @@ class Node:
            firstNode.item = secondNode.item
            secondNode.item = temp
 
+    # function to get the index of a speceific value
+    def indexof(self,value):
+        current = self
+        for i in range(self.lenght):
+            if current.item == value:
+                return i
+            else:
+                current = current.next
+        print("Error , this value isn't exist in the linkedlist")
+
     # a function to return a copy of the linkedlist
     def copy(self):
         copy = Node()
         for i in range(self.lenght):
             copy.insert(value = self[i])
-        # for i in range(list.lenght):
-        #     copy.insert(list[i])
         return copy
     
     # operator overloading to Concatenate a new linkedlist to this linkedlist
