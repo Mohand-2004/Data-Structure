@@ -74,14 +74,3 @@ template <typename DataType> class Stack{
             return this->linkedlist[index];
         }
 };
-
-int main(void){
-    Stack<int> stack;
-    for(int i = 1;i<6;i++){
-        stack.push(i);
-    }
-
-    for(int i = 0;i<stack.lenght();i++){
-        cout<<stack[i]<<' ';
-    }
-}
