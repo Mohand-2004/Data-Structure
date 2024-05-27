@@ -1,4 +1,4 @@
-# Prority Stack Implementation using Python Programming Language
+# Stack Implementation using Python Programming Language
 # This Stack has 8 methodes :
 # 1.lenght() => to return the number of elements in Stack
 # 2.MAX() => to return the largest element with num data type and the largest ascii value for another data types
